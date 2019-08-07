@@ -4,6 +4,7 @@ This guide documents the specific steps needed after the initial installation of
 ## Fix issue with backlight
 ```
 # sed -i '/GRUB_CMDLINE_LINUX_DEFAULT=/c\GRUB_CMDLINE_LINUX_DEFAULT=\"quiet acpi_backlight=none amdgpu.dc=0\"' /etc/default/grub
+# grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 ## Install nft and implement rules
