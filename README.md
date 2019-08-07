@@ -7,11 +7,14 @@ This guide documents the specific steps needed after the initial installation of
 # grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-## Install nft and implement rules
+## Install nftables
+Download the package and copy the file `conf/nftables.conf` to `/etc/`.
+
 ```
 # apt install nftables
+# mv conf/nftables.conf /etc/
+# systemctl enable nftables.service
 ```
-Next copy the file `conf/nftables.conf` to `/etc/`.
 
 ## Clear error on systemd network initialization
 ```
