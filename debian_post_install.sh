@@ -9,7 +9,8 @@
 
 
 # ----------------------------------------------- 
-# Initial setup ( wireless, time/date )
+# Fix dark screen & hibernate
 # ----------------------------------------------- 
 
-echo ":: Disabling soft blocks..."
+echo ":: Optimizing kernel for display..."
+
