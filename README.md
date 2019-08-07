@@ -24,10 +24,9 @@ Download the package and copy the file `conf/nftables.conf` to `/etc/`.
 
 # Add necessary firmware files for atheros card
 
-Download latest atheros firmware from here: http://ftp.us.debian.org/debian/pool/non-free/f/firmware-nonfree/.
+The latest atheros firmware can be found here: http://ftp.us.debian.org/debian/pool/non-free/f/firmware-nonfree/.
 
-After download, run the following: 
 ```
-dpkg -i firmware-atheros_xxx_all.deb
+dpkg -i conf/firmware-atheros_xxx_all.deb
 ```
 
