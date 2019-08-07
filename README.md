@@ -20,6 +20,6 @@ Next copy the file `conf/nftables.conf` to `/etc/`.
 
 # Add necessary firmware files for atheros card
 
-Search for atheros firmware here: `http://ftp.us.debian.org/debian/pool/non-free/f/firmware-nonfree/`. 
+Search for atheros firmware here: http://ftp.us.debian.org/debian/pool/non-free/f/firmware-nonfree/. 
 Download and run: `dpkg -i firmware-atheros_<datex>xxx_all.deb` 
 
