@@ -1,6 +1,6 @@
 # Introduction
 
 ```
-# rm -R /etc/network/interfaces.d
+# rm /etc/network/interfaces.d/*
 
 ```
