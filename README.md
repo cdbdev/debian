@@ -1,5 +1,15 @@
 # Introduction
+Todo....
 
+## Fix issue with backlight
+```
+# sed
+```
+
+## Install nft and implement rules
+```
+# apt install nftables
+```
 
 ## Clear error on systemd network initialization
 ```
