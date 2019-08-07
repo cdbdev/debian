@@ -17,6 +17,8 @@ Todo....
 
 ```
 
+# Add necessary firmware files for atheros card
+
 Search for atheros firmware here: `http://ftp.us.debian.org/debian/pool/non-free/f/firmware-nonfree/`. 
-Download and run: `dpkg -i firmware-atheros_xxx_all.deb` 
+Download and run: `dpkg -i firmware-atheros_<datex>xxx_all.deb` 
 
