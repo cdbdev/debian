@@ -1,5 +1,5 @@
 # Introduction
-Todo....
+This guide documents the specific steps needed after the initial installation of Debian on my Lenovo ideapad 320.
 
 ## Fix issue with backlight
 ```
