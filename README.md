@@ -24,6 +24,6 @@ Download latest atheros firmware here: http://ftp.us.debian.org/debian/pool/non-
 
 After download, run the following: 
 ```
-dpkg -i firmware-atheros_<datex>xxx_all.deb
+dpkg -i firmware-atheros_xxx_all.deb
 ```
 
