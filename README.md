@@ -27,6 +27,6 @@ Download the package and copy the file `conf/nftables.conf` to `/etc/`.
 The latest atheros firmware can be found here: http://ftp.us.debian.org/debian/pool/non-free/f/firmware-nonfree/.
 
 ```
-dpkg -i conf/firmware-atheros_xxx_all.deb
+dpkg -i conf/firmware-atheros_20190717-1_all.deb
 ```
 
