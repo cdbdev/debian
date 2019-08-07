@@ -10,6 +10,7 @@ This guide documents the specific steps needed after the initial installation of
 ```
 # apt install nftables
 ```
+Next copy the file `conf/nftables.conf` to `/etc/`.
 
 ## Clear error on systemd network initialization
 ```
