@@ -3,7 +3,7 @@ Todo....
 
 ## Fix issue with backlight
 ```
-# sed
+# sed -i '/GRUB_CMDLINE_LINUX_DEFAULT=/c\GRUB_CMDLINE_LINUX_DEFAULT=\"quiet acpi_backlight=none amdgpu.dc=0\"'
 ```
 
 ## Install nft and implement rules
