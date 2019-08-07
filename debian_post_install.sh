@@ -17,5 +17,8 @@ sed -i '/GRUB_CMDLINE_LINUX_DEFAULT=/c\GRUB_CMDLINE_LINUX_DEFAULT=\"quiet acpi_b
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # ----------------------------------------------- 
-# Fix dark screen & hibernate
+# Install and configure nftables
 # ----------------------------------------------- 
+apt install nftables
+mv conf/nftables.conf /etc/
+systemctl enable nftables.service
