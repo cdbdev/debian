@@ -1,5 +1,8 @@
-# Introduction
+# Installation guide
 This guide documents the specific steps needed after the initial installation of Debian on my Lenovo ideapad 320.
+
+Download this repo with:
+wget --no-check-certificate https://github.com/cdbdev/debian-install/archive/master.tar.gz
 
 ## Fix issue with backlight
 ```
