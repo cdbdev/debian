@@ -29,8 +29,12 @@ Simply select the Debian ISO, the USB drive you want to create the bootable Debi
 Choose 'Graphical install' from the installer menu.  
 **Note: Although the touchpad will not work yet, you can make use of the keyboard to navigate through the installation process.**
 
+### Extra firmware
+The Atheros card (wifi) requires non-free firmware, so you will be asked if you want to insert an extra medium with the necessary firmware. As this iso already contains the non-free firmware, choose 'no' in this step.
+
 ### Partition disks
 During this step, make sure to select the 'Manual' option. In the next step, delete the existing partitions labeled with `(ext4) /` and `swap swap`. Do not touch the windows partitions! Now choose **'Guided partitioning'** and afterwards **'Guided - use the largest continuous free space'**. Finally select **'All files in one partition (recommended for new users)'** and finish the partitioning step.
+
 
 ## Post-installation
 
