@@ -37,6 +37,7 @@ During this step, make sure to select the 'Manual' option. In the next step, del
 
 
 ## Post-installation
+Do not boot into the Graphical environment just yet! First, follow the next steps and reboot afterwards.
 
 ### Fix issue with backlight
 ```
@@ -61,7 +62,8 @@ Download the package and copy the file `conf/nftables.conf` to `/etc/`.
 
 ### Add necessary firmware files for atheros card
 
-The latest atheros firmware can be found here: http://ftp.us.debian.org/debian/pool/non-free/f/firmware-nonfree/.
+The latest atheros firmware can be found here: http://ftp.us.debian.org/debian/pool/non-free/f/firmware-nonfree/.  
+Install the package:
 
 ```
 # dpkg -i conf/firmware-atheros_20190717-1_all.deb
