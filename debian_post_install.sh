@@ -26,3 +26,17 @@ echo ":: Installing nftables..."
 apt-get install nftables
 mv conf/nftables.conf /etc/
 systemctl enable nftables.service
+
+# ----------------------------------------------- 
+# Clear error on systemd network initialization
+# ----------------------------------------------- 
+echo ":: Clearing setup network configuration..."
+rm /etc/network/interfaces.d/*
+
+# ----------------------------------------------- 
+# Install necessary firmware files for atheros card
+# ----------------------------------------------- 
+echo ":: Installing atheros firmware..."
+dpkg -i conf/firmware-atheros_20190717-1_all.deb
+
+echo ":: Installation finished"
