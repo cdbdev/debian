@@ -65,7 +65,7 @@ During installation, a 'setup' file is created under `/etc/network/interfaces.d`
 # rm /etc/network/interfaces.d/*
 
 ```
-**_Note_**:_We delete everything in this directory, because the network configuration is not managed by `ifupdown`, but by `NetworkManager`._
+**_Note_**: _We delete everything in this directory, because the network configuration is not managed by `ifupdown`, but by `NetworkManager`._
 
 ### Add necessary firmware files for atheros card
 
