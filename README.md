@@ -30,7 +30,7 @@ Choose 'Graphical install' from the installer menu.
 **Note: Although the touchpad will not work yet, you can make use of the keyboard to navigate through the installation process.**
 
 ### Partition disks
-During this step, make sure to select the 'Manual' option. In the next step, delete the existing partitions labeled with `(ext4) /` and `swap swap`. Now choose 'Guided partitioning' and afterwards 'Guided - use the largest continuous free space'. Finally select `All files in one partition (recommended for new users)` and finish the partitioning step.
+During this step, make sure to select the 'Manual' option. In the next step, delete the existing partitions labeled with `(ext4) /` and `swap swap`. Now choose **Guided partitioning** and afterwards **Guided - use the largest continuous free space**. Finally select **All files in one partition (recommended for new users)** and finish the partitioning step.
 
 ## Post-installation
 
