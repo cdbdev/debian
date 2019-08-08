@@ -1,12 +1,12 @@
 # Installation guide
-This guide documents the specific steps needed after the initial installation of Debian on my Lenovo ideapad 320.
+This guide documents the specific steps needed to install Debian on my Lenovo ideapad 320.
 
 Download this repo with:  
 wget --no-check-certificate https://github.com/cdbdev/debian-install/archive/master.tar.gz
 
 ## Installation media
 Go to https://cdimage.debian.org/images/unofficial/non-free/images-including-firmware/ and choose your version of Debian.  
-Next, choose `amd64/iso-dvd/firmware-xxx-amd64-DVD-1.iso`.
+The iso file should be located under: `amd64/iso-dvd/firmware-xxx-amd64-DVD-1.iso`.
 
 Now create the installation media:
 
@@ -15,15 +15,22 @@ Run the following commands, replacing /dev/sdx with your drive, e.g. /dev/sdb. (
 
 ```
 #  mkfs.vfat -I /dev/sdx
-#  dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
+#  dd bs=4M if=/path/to/debian.iso of=/dev/sdx status=progress oflag=sync
 ```
 
 In **Windows**:
 
 Using Rufus from https://rufus.akeo.ie/.  
-Simply select the Arch Linux ISO, the USB drive you want to create the bootable Arch Linux onto and click start. 
+Simply select the Debian ISO, the USB drive you want to create the bootable Debian Linux onto and click start. 
 
 **_Note_**: _Be sure to select DD image mode from the dropdown menu or when the program asks which mode to use (ISO or DD), otherwise the image will be transferred incorrectly._
+
+## Main installation
+Choose 'Graphical install' from the installer menu.  
+**Note: Although the touchpad will not work yet, you can make use of the keyboard to navigate through the installation process.**
+
+### Partition disks
+During this step, make sure to select the 'Manual' option. In the next step, delete the existing partitions labeled with '/' (ext4) and 'swap'. Now choose 'Guided partitioning' and after this 'Guided - use the largest continuous free space'. Finally select 'All files in one partition (recommended for new users)' and finish the partitioning step.
 
 ## Fix issue with backlight
 ```
