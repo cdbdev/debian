@@ -24,7 +24,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 # ----------------------------------------------- 
 echo ":: Installing nftables..."
 apt-get install nftables
-mv conf/nftables.conf /etc/
+cp conf/nftables.conf /etc/
 systemctl enable nftables.service
 
 # ----------------------------------------------- 
