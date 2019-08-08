@@ -37,7 +37,11 @@ During this step, make sure to select the 'Manual' option. In the next step, del
 
 
 ## Post-installation
-Do not boot into the Graphical environment just yet! First, follow the next steps and reboot afterwards.
+Do not boot into the Graphical environment just yet! First, follow the next steps and reboot afterwards.  
+Before continuing, make sure to update the system first:
+```
+# apt update && apt upgrade
+```
 
 ### Fix issue with backlight
 ```
