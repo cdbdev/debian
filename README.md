@@ -26,6 +26,7 @@ Simply select the Debian ISO, the USB drive you want to create the bootable Debi
 
 ## Main installation
 Choose 'Graphical install' from the installer menu.  
+
 **_Note_**: _Although the touchpad will not work yet, you can make use of the keyboard to navigate through the installation process._
 
 ### Extra firmware
