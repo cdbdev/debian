@@ -30,15 +30,17 @@ Choose 'Graphical install' from the installer menu.
 **Note: Although the touchpad will not work yet, you can make use of the keyboard to navigate through the installation process.**
 
 ### Partition disks
-During this step, make sure to select the 'Manual' option. In the next step, delete the existing partitions labeled with '/' (ext4) and 'swap'. Now choose 'Guided partitioning' and after this 'Guided - use the largest continuous free space'. Finally select 'All files in one partition (recommended for new users)' and finish the partitioning step.
+During this step, make sure to select the 'Manual' option. In the next step, delete the existing partitions labeled with `(ext4) /` and `swap swap`. Now choose 'Guided partitioning' and afterwards 'Guided - use the largest continuous free space'. Finally select `All files in one partition (recommended for new users)` and finish the partitioning step.
 
-## Fix issue with backlight
+## Post installation
+
+### Fix issue with backlight
 ```
 # sed -i '/GRUB_CMDLINE_LINUX_DEFAULT=/c\GRUB_CMDLINE_LINUX_DEFAULT=\"quiet acpi_backlight=none amdgpu.dc=0\"' /etc/default/grub
 # grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-## Install nftables
+### Install nftables
 Download the package and copy the file `conf/nftables.conf` to `/etc/`.
 
 ```
@@ -47,13 +49,13 @@ Download the package and copy the file `conf/nftables.conf` to `/etc/`.
 # systemctl enable nftables.service
 ```
 
-## Clear error on systemd network initialization
+### Clear error on systemd network initialization
 ```
 # rm /etc/network/interfaces.d/*
 
 ```
 
-# Add necessary firmware files for atheros card
+### Add necessary firmware files for atheros card
 
 The latest atheros firmware can be found here: http://ftp.us.debian.org/debian/pool/non-free/f/firmware-nonfree/.
 
