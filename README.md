@@ -68,6 +68,7 @@ During installation, a 'setup' file is created under `/etc/network/interfaces.d`
 **_Note_**: _We delete everything in this directory, because the network configuration is not managed by `ifupdown`, but by `NetworkManager`._
 
 ### Add necessary firmware files for atheros card
+The non-free firmware installation image (currently Debian Buster) does not include the latest binaries for the atheros card. Make sure to download and install these next to the original ones.
 
 The latest atheros firmware can be found here: http://ftp.us.debian.org/debian/pool/non-free/f/firmware-nonfree/.  
 Install the package:
