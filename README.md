@@ -40,7 +40,7 @@ During this step, make sure to select the 'Manual' option. In the next step, del
 
 
 ## Post-installation
-Do not boot into the Graphical environment just yet! First switch to a non-graphical tty and follow the next steps and reboot afterwards.
+Do not boot into the Graphical environment just yet (if it is at all possible)! First switch to a non-graphical tty and follow the next steps and reboot afterwards.
 
 Before continuing, make sure to update the system first:
 ```
@@ -81,3 +81,9 @@ Install the package:
 # dpkg -i conf/firmware-atheros_20190717-1_all.deb
 ```
 
+### Add necessary firmware for AMD
+The non-live installer does not automatically install the necessary firmware for the AMD graphical card. So we have to install it manually.
+
+```
+apt install firmware-linux
+```
