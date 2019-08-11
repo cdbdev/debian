@@ -8,6 +8,11 @@
 # ----------------------------------------------------------------------- #
 
 # ----------------------------------------------- 
+# Set root password
+# ----------------------------------------------- 
+passwd root
+
+# ----------------------------------------------- 
 # Update system
 # ----------------------------------------------- 
 apt-get update && apt-get upgrade
@@ -40,3 +45,9 @@ echo ":: Installing atheros firmware..."
 dpkg -i conf/firmware-atheros_20190717-1_all.deb
 
 echo ":: Installation finished"
+
+# ----------------------------------------------- 
+# Installation extras
+# ----------------------------------------------- 
+apt-get install arc-theme
+apt-get install papirus-icon-theme
