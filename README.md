@@ -32,6 +32,9 @@ Choose 'Graphical install' from the installer menu.
 ### Extra firmware
 The Atheros card (wifi) requires non-free firmware, so you will be asked if you want to insert an extra medium with the necessary firmware. As this iso already contains the non-free firmware, choose 'no' in this step.
 
+### User accounts
+Do not specify a password for the “root” user, this account will be disabled but the sudo package will be installed later to enable administrative tasks to be carried out on the new system. By default, the first user created on the system will be allowed to use the sudo command to become root. 
+
 ### Partition disks
 During this step, make sure to select the 'Manual' option. In the next step, delete the existing partitions labeled with `ext4 <tab> /` and `swap <tab> swap`. Do not touch the windows partitions! Now choose **'Guided partitioning'** and afterwards **'Guided - use the largest continuous free space'**. Finally select **'All files in one partition (recommended for new users)'** and finish the partitioning step.
 
