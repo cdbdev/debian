@@ -45,6 +45,11 @@ echo ":: Installing atheros firmware..."
 dpkg -i conf/firmware-atheros_20190717-1_all.deb
 
 # ----------------------------------------------- 
+# Install AMD firmware
+# ----------------------------------------------- 
+apt-get install firmware-linux
+
+# ----------------------------------------------- 
 # Installation extras
 # ----------------------------------------------- 
 apt-get install arc-theme
