@@ -44,10 +44,10 @@ rm /etc/network/interfaces.d/*
 echo ":: Installing atheros firmware..."
 dpkg -i conf/firmware-atheros_20190717-1_all.deb
 
-echo ":: Installation finished"
-
 # ----------------------------------------------- 
 # Installation extras
 # ----------------------------------------------- 
 apt-get install arc-theme
 apt-get install papirus-icon-theme
+
+echo ":: Installation finished"
