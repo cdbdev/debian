@@ -10,11 +10,15 @@
 # ----------------------------------------------- 
 # Set root password
 # ----------------------------------------------- 
+echo ":: Setting password for root..."
 passwd root
 
 # ----------------------------------------------- 
 # Update system
 # ----------------------------------------------- 
+echo -e "??" > /etc/apt/sources.list
+echo -e "??" >> /etc/apt/sources.list
+
 apt-get update && apt-get upgrade
 
 # ----------------------------------------------- 
