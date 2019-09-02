@@ -42,7 +42,16 @@ During this step, make sure to select the 'Manual' option. In the next step, del
 ## Post-installation
 Do not boot into the Graphical environment just yet (if it is at all possible)! First switch to a non-graphical tty and follow the next steps and reboot afterwards.
 
-Before continuing, make sure to update the system first:
+Before continuing, make sure the `sources.list` is complete like this:
+```
+deb http://deb.debian.org/debian buster main contrib non-free
+deb-src http://deb.debian.org/debian buster main contrib non-free
+
+deb http://security.debian.org/debian-security buster/updates main contrib
+deb-src http://security.debian.org/debian-security buster/updates main contrib
+```
+
+Next update the system before installing extra packages:
 ```
 # apt update && apt upgrade
 ```
