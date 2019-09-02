@@ -16,8 +16,10 @@ passwd root
 # ----------------------------------------------- 
 # Update system
 # ----------------------------------------------- 
-echo -e "??" > /etc/apt/sources.list
-echo -e "??" >> /etc/apt/sources.list
+echo "deb http://deb.debian.org/debian buster main contrib non-free" > /etc/apt/sources.list
+echo -e "deb-src http://deb.debian.org/debian buster main contrib non-free\n\n" >> /etc/apt/sources.list
+echo "deb http://security.debian.org/debian-security buster/updates main contrib non-free" >> /etc/apt/sources.list
+echo "deb-src http://security.debian.org/debian-security buster/updates main contrib non-free" >> /etc/apt/sources.list
 
 apt-get update && apt-get upgrade
 
