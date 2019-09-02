@@ -21,8 +21,10 @@ read debian_version
 
 echo "deb http://deb.debian.org/debian $debian_version main contrib non-free" > /etc/apt/sources.list
 echo -e "deb-src http://deb.debian.org/debian $debian_version main contrib non-free\n\n" >> /etc/apt/sources.list
-echo "deb http://security.debian.org/debian-security $debian_version/updates main contrib non-free" >> /etc/apt/sources.list
-echo "deb-src http://security.debian.org/debian-security $debian_version/updates main contrib non-free" >> /etc/apt/sources.list
+echo "deb http://deb.debian.org/debian-security/ $debian_version/updates main contrib non-free" >> /etc/apt/sources.list
+echo -e "deb-src http://deb.debian.org/debian-security/ $debian_version/updates main contrib non-free\n\n" >> /etc/apt/sources.list
+echo "deb http://deb.debian.org/debian $debian_version-updates main contrib non-free" >> /etc/apt/sources.list
+echo "deb-src http://deb.debian.org/debian $debian_version-updates main contrib non-free" >> /etc/apt/sources.list
 
 apt-get update && apt-get upgrade
 
