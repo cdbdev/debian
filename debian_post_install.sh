@@ -16,6 +16,7 @@ passwd root
 # ----------------------------------------------- 
 # Update system
 # ----------------------------------------------- 
+cat /etc/os-release
 echo -n ">> Please enter debian version [buster,...]: "
 read debian_version
 
