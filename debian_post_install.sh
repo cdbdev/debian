@@ -27,6 +27,13 @@ echo "deb-src http://security.debian.org/debian-security $debian_version/updates
 apt-get update && apt-get upgrade
 
 # ----------------------------------------------- 
+# Add screenfetch
+# ----------------------------------------------- 
+echo ":: Adding screenfetch..."
+apt-get install screenfetch
+echo screenfetch >> .bashrc
+
+# ----------------------------------------------- 
 # Fix dark screen & hibernate
 # ----------------------------------------------- 
 echo ":: Adjusting GRUB for optimal display..."
