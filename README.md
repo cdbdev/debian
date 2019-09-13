@@ -49,7 +49,7 @@ When the new system is installed and rebooted, perform the following:
 # apt install xorg openbox obconf lxappearance-obconf obmenu feh lightdm light-locker pcmanfm lxterminal leafpad tint2 conky network-manager network-manager-applet firefox screenfetch xreader libreoffice galculator gvfs dosfstools
 ```
 
-Start 'tint2' at boot:
+Enable taskbar(tint2) on boot:
 ```
 # echo "tint2 &" >> ~/.config/openbox/autostart
 ```
