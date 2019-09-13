@@ -38,6 +38,16 @@ Do not specify a password for the “root” user, this account will be disabled
 ### Partition disks
 During this step, make sure to select the 'Manual' option. In the next step, delete the existing partitions labeled with `ext4 <tab> /` and `swap <tab> swap`. Do not touch the windows partitions! Now choose **'Guided partitioning'** and afterwards **'Guided - use the largest continuous free space'**. Finally select **'All files in one partition (recommended for new users)'** and finish the partitioning step.
 
+## Desktop Environment
+### XFCE
+Choose **XFCE** option during `Select and install software`
+
+### Openbox
+Do not choose a DE during installation and leave the defaults selected at `Select and install software`.  
+When the new system is rebooted, perform the following:
+```
+# apt-get install xorg openbox obconf obmenu feh lightdm light-locker pcmanfm lxterminal leafpad tint2 conky network-manager network-manager-applet firefox screenfetch xreader libreoffice galculator gvfs dosfstools
+```
 
 ## Post-installation
 Do not boot into the Graphical environment just yet (if it is at all possible)! First switch to a non-graphical tty and follow the next steps and reboot afterwards.
