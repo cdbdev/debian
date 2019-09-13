@@ -49,6 +49,11 @@ When the new system is installed and rebooted, perform the following:
 # apt install xorg openbox obconf lxappearance-obconf obmenu feh lightdm light-locker pcmanfm lxterminal leafpad tint2 conky network-manager network-manager-applet firefox screenfetch xreader libreoffice galculator gvfs dosfstools
 ```
 
+Start 'tint2' at boot:
+```
+# echo "tint2 &" > ~/.config/openbox/autostart
+```
+
 #### Install arc theme
 Open `Obconf` and under 'Theme' click on `Install a new theme...` and point it to the .obt files.
 
