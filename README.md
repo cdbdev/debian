@@ -51,7 +51,7 @@ When the new system is installed and rebooted, perform the following:
 
 Start 'tint2' at boot:
 ```
-# echo "tint2 &" > ~/.config/openbox/autostart
+# echo "tint2 &" >> ~/.config/openbox/autostart
 ```
 
 #### Install arc theme
