@@ -49,6 +49,9 @@ When the new system is installed and rebooted, perform the following:
 # apt install xorg openbox obconf obmenu feh lightdm light-locker pcmanfm lxterminal leafpad tint2 conky network-manager network-manager-applet firefox screenfetch xreader libreoffice galculator gvfs dosfstools
 ```
 
+#### Install arc theme
+Open `Obconf` and under 'Theme' click on `Install a new theme...` and point it to the .obt files.
+
 ## Post-installation
 Do not boot into the Graphical environment just yet (if it is at all possible)! First switch to a non-graphical tty and follow the next steps and reboot afterwards.
 
