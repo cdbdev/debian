@@ -46,7 +46,7 @@ Choose **XFCE** option during `Select and install software`
 Do not choose a DE during installation and leave the defaults selected at `Select and install software`.  
 When the new system is installed and rebooted, perform the following:
 ```
-# apt install xorg openbox obconf lxappearance-obconf obmenu feh lightdm light-locker thunar xfce4-terminal mousepad tint2 conky network-manager network-manager-applet firefox screenfetch xreader libreoffice-writer galculator gvfs dosfstools xfce4-power-manager
+# apt install xorg openbox obconf lxappearance-obconf obmenu feh lightdm lightdm-gtk-greeter light-locker tint2 conky network-manager network-manager-applet firefox screenfetch xreader libreoffice-writer galculator gvfs dosfstools thunar xfce4-terminal mousepad xfce4-power-manager catfish compton gsimplecal pulseaudio
 ```
 
 Enable taskbar(tint2) on boot:
