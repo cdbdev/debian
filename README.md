@@ -101,7 +101,6 @@ apt install firmware-linux
 ```
 
 ### Optional: install Openbox
-Do not choose a DE during installation and leave the defaults selected at `Select and install software`.  
 When the new system is installed and rebooted, perform the following:
 ```
 # apt install xorg openbox obconf lxappearance-obconf obmenu feh lightdm lightdm-gtk-greeter light-locker tint2 conky network-manager network-manager-applet firefox screenfetch xreader libreoffice-writer galculator gvfs dosfstools pulseaudio thunar xfce4-terminal mousepad xfce4-power-manager catfish compton gsimplecal
