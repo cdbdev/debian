@@ -42,21 +42,6 @@ During this step, make sure to select the 'Manual' option. In the next step, del
 ### XFCE
 Choose **XFCE** option during `Select and install software`
 
-### Openbox
-Do not choose a DE during installation and leave the defaults selected at `Select and install software`.  
-When the new system is installed and rebooted, perform the following:
-```
-# apt install xorg openbox obconf lxappearance-obconf obmenu feh lightdm lightdm-gtk-greeter light-locker tint2 conky network-manager network-manager-applet firefox screenfetch xreader libreoffice-writer galculator gvfs dosfstools pulseaudio thunar xfce4-terminal mousepad xfce4-power-manager catfish compton gsimplecal
-```
-
-Enable taskbar(tint2) on boot:
-```
-# echo "tint2 &" >> ~/.config/openbox/autostart
-```
-
-#### Install arc theme
-Open `Obconf` and under 'Theme' click on `Install a new theme...` and point it to the .obt files.
-
 ## Post-installation
 Do not boot into the Graphical environment just yet (if it is at all possible)! First switch to a non-graphical tty and follow the next steps and reboot afterwards.
 
@@ -114,3 +99,19 @@ The non-live installer does not automatically install the necessary firmware for
 ```
 apt install firmware-linux
 ```
+
+### Optional: install Openbox
+Do not choose a DE during installation and leave the defaults selected at `Select and install software`.  
+When the new system is installed and rebooted, perform the following:
+```
+# apt install xorg openbox obconf lxappearance-obconf obmenu feh lightdm lightdm-gtk-greeter light-locker tint2 conky network-manager network-manager-applet firefox screenfetch xreader libreoffice-writer galculator gvfs dosfstools pulseaudio thunar xfce4-terminal mousepad xfce4-power-manager catfish compton gsimplecal
+```
+
+Enable taskbar(tint2) on boot:
+```
+# echo "tint2 &" >> ~/.config/openbox/autostart
+```
+
+#### Install arc theme
+Open `Obconf` and under 'Theme' click on `Install a new theme...` and point it to the .obt files.
+
