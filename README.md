@@ -5,7 +5,7 @@ Download this repo with:
 wget --no-check-certificate https://github.com/cdbdev/debian-install/archive/master.tar.gz
 
 ## Installation media
-Go to https://cdimage.debian.org/images/unofficial/non-free/images-including-firmware/ and choose your version of Debian (non-live installer). The iso file should be located under: `amd64/iso-dvd/firmware-xxx-amd64-DVD-1.iso`.
+Go to https://cdimage.debian.org/images/unofficial/non-free/images-including-firmware/ and choose your version of Debian (live installer). The iso file should be located under: `amd64/iso-hybrid/debian-live-xx.x.x-amd64-xfce+nonfree.iso`.
 
 Now create the installation media:
 
