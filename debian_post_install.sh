@@ -54,8 +54,11 @@ systemctl enable nftables.service
 # ----------------------------------------------- 
 # Clear error on systemd network initialization
 # ----------------------------------------------- 
-echo ":: Clearing setup network configuration..."
-rm /etc/network/interfaces.d/*
+if [ ! "$(ls -A /etc/network/interfaces.d)" ]
+then
+    echo ":: Clearing setup network configuration..."
+    rm /etc/network/interfaces.d/*
+fi
 
 # ----------------------------------------------- 
 # Install necessary firmware files for atheros card
