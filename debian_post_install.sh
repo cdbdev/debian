@@ -36,13 +36,13 @@ echo -e "deb-src http://deb.debian.org/debian-security/ $debian_version/updates 
 echo "deb http://deb.debian.org/debian $debian_version-updates main contrib non-free" >> /etc/apt/sources.list
 echo "deb-src http://deb.debian.org/debian $debian_version-updates main contrib non-free" >> /etc/apt/sources.list
 
-apt-get update && apt-get upgrade
+apt-get update && apt-get -y upgrade
 
 # ----------------------------------------------- 
 # Add screenfetch
 # ----------------------------------------------- 
 echo ":: Adding screenfetch..."
-apt-get install screenfetch
+apt-get -y install screenfetch
 echo screenfetch >> .bashrc
 
 # ----------------------------------------------- 
@@ -56,7 +56,7 @@ update-grub
 # Install and configure nftables
 # ----------------------------------------------- 
 echo ":: Installing nftables..."
-apt-get install nftables
+apt-get -y install nftables
 cp conf/nftables.conf /etc/
 systemctl enable nftables.service
 
@@ -78,12 +78,12 @@ dpkg -i conf/firmware-atheros_20190717-1_all.deb
 # ----------------------------------------------- 
 # Install AMD firmware
 # ----------------------------------------------- 
-apt-get install firmware-linux
+apt-get -y install firmware-linux
 
 # ----------------------------------------------- 
 # Installation extras
 # ----------------------------------------------- 
-apt-get install arc-theme
-apt-get install papirus-icon-theme
+apt-get -y install arc-theme
+apt-get -y install papirus-icon-theme
 
 echo ":: Installation finished"
