@@ -23,6 +23,12 @@ echo ":: Setting password for root..."
 passwd root
 
 # ----------------------------------------------- 
+# Disable <beep>
+# ----------------------------------------------- 
+echo ":: Disabling <beep>"
+echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
+
+# ----------------------------------------------- 
 # Update system
 # ----------------------------------------------- 
 cat /etc/os-release
