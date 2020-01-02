@@ -47,7 +47,7 @@ apt-get update && apt-get -y upgrade
 # ----------------------------------------------- 
 # Install extra software
 # ----------------------------------------------- 
-apt-get -y install gedit
+apt-get -y install gedit lightdm-gtk-greeter-settings
 
 # ----------------------------------------------- 
 # Add screenfetch
