@@ -45,6 +45,11 @@ echo "deb-src http://deb.debian.org/debian $debian_version-updates main contrib 
 apt-get update && apt-get -y upgrade
 
 # ----------------------------------------------- 
+# Install extra software
+# ----------------------------------------------- 
+apt-get -y install gedit
+
+# ----------------------------------------------- 
 # Add screenfetch
 # ----------------------------------------------- 
 echo ":: Adding screenfetch..."
@@ -93,3 +98,14 @@ apt-get -y install arc-theme
 apt-get -y install papirus-icon-theme
 
 echo ":: Installation finished"
+
+# ----------------------------------------------- 
+# Configure dnsmasq
+# ----------------------------------------------- 
+echo ":: Configuring dnsmasq..."
+apt-get -y install openresolv dnsmasq
+systemctl enable dnsmasq.service
+cp conf/dnsmasq.conf /etc/
+cp conf/resolvconf.conf /etc/
+cp conf/trust-anchors.conf /usr/share/dnsmasq/
+resolvconf -u
