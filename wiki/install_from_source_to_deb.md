@@ -1,4 +1,4 @@
-# Intro
+# Introduction
 There are 3 options to build from source:
 - create DEB from Debianized source
 - create DEB from upstream source using helper scripts
