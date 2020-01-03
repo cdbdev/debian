@@ -11,3 +11,20 @@ There are 3 options to build from source:
 ```
 # apt-get install build-essential fakeroot devscripts
 ```
+
+## configure apt
+Once you have installed the needed packages, the next thing that you need to do, is make sure that you have some **source repositories** configured in your computer.
+
+Open your /etc/apt/sources.list file and check if you have one or more lines that start with deb-src.
+
+```
+deb-src http://ftp.us.debian.org/debian/ unstable main
+```
+
+Once you've added the line, you'll need to do `apt-get update`.
+
+## Get the source package
+In order to get the source of your package, go to your working directory and run:
+```
+apt-get source <enter package here>
+```
