@@ -32,7 +32,7 @@ Once you've added the line, you'll need to do `apt-get update`.
 ## Get the source package
 In order to get the source of your package, go to your working directory and run:
 ```bash
-# apt-get source <packagename>
+#  apt-get source <packagename>
 # cd <packagename>-<version>/
 ```
 
