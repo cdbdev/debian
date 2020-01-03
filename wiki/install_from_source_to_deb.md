@@ -11,7 +11,7 @@ The first 2 options create so called `backports`, the last one installs the soft
 # Prerequisites
 ## Install required packages for build
 ```bash
-# apt-get install build-essential fakeroot devscripts
+apt-get install build-essential fakeroot devscripts
 ```
 
 ## Configure apt
@@ -26,14 +26,14 @@ Once you've added the line, you'll need to do `apt-get update`.
 # Build Process (Debianized source)
 ## Get the dependencies for your package
 ```bash
-# apt-get build-dep <packagename>
+apt-get build-dep <packagename>
 ```
   
 ## Get the source package
 In order to get the source of your package, go to your working directory and run:
 ```bash
 apt-get source <packagename>
-# cd <packagename>-<version>/
+cd <packagename>-<version>/
 ```
 
 ## Change package version number
@@ -47,20 +47,20 @@ Examples:
 To do that, you edit the debian/changelog file.  
 Example:
 ```bash
-# debchange -b -v 0.1.2a-1~bpo10+1
+debchange -b -v 0.1.2a-1~bpo10+1
 ```
 A text editor opens in which you can put some comment and save your changes.
 
 ## Build the DEB file
 Run the following inside the working directory:
 ```bash
-# debuild
+debuild
 ```
 
 ## Install the DEB file
 That last command may take a minute or an hour or three hours. It all depends on the size of the package and your own hardware. Once the command finishes, a .deb file is created and you can install it (as root) with:
 ```bash
-# dpkg -i <packagename>_<version>_<architecture>.deb
+dpkg -i <packagename>_<version>_<architecture>.deb
 ```
 
 # Build Process (upstream source using helper scripts)
