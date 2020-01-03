@@ -35,11 +35,17 @@ cd <packagename>-<version>/
 ```
 
 ## Change package version number
-If you're running Debian Stable, you may want to change the package's version number, so that the upgrade path to the next version of Debian Stable is preserved. To do that, you edit the debian/changelog file.
+If you're running Debian Stable, you may want to change the package's version number to make a proper backport. 
 
-For example, I recently backported version 0.8.3a-1 of wxMaxima to Debian Lenny, so at this point, I ran:
+Format of backported package version: append `~bpo${debian_release}+${build_int}`.  
+Examples:
+- 1.2.3-4 now becomes 1.2.3-4~bpo9+1 for stretch
+- 1.2.3-4 now becomes 1.2.3-4~bpo10+1 for buster
+
+To do that, you edit the debian/changelog file.  
+Example:
 ```
-debchange -b -v 0.8.3a-1~bpo50+1
+debchange -b -v 0.1.2a-1~bpo10+1
 ```
 A text editor opens in which you can put some comment. Save your changes.
 
