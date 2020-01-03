@@ -1,6 +1,7 @@
 # Intro
-There are 2 options to build from source:
+There are 3 options to build from source:
 - create DEB from Debianized source
+- create DEB from upstream source using helper scripts
 - create DEB from upstream source using: `make` and `make install`
 
 `make install` should be your absolute last resort. You should NEVER use it unless all other options have failed and you should ONLY use it IF the package you want to build is of mission critical importance.
