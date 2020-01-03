@@ -26,7 +26,8 @@ The next thing that you need to do, is make sure that you have some **source rep
 Open your `/etc/apt/sources.list` file and check if you have one or more lines that start with `deb-src`:
 
 ```bash
-deb-src http://ftp.us.debian.org/debian/ unstable main
+deb-src http://ftp.debian.org/debian/ unstable main
+deb-src http://ftp.debian.org/debian/ experimental main
 ```
 Once you've added the line, you'll need to do `apt-get update`.
 
