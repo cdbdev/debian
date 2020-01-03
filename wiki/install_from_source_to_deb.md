@@ -13,8 +13,7 @@ There are 3 options to build from source:
 ```
 
 ## configure apt
-Once you have installed the needed packages, the next thing that you need to do, is make sure that you have some **source repositories** configured in your computer.
-
+The next thing that you need to do, is make sure that you have some **source repositories** configured in your computer.  
 Open your /etc/apt/sources.list file and check if you have one or more lines that start with deb-src.
 
 ```
