@@ -41,3 +41,9 @@ For example, I recently backported version 0.8.3a-1 of wxMaxima to Debian Lenny,
 ```
 debchange -b -v 0.8.3a-1~bpo50+1
 ```
+A text editor opens in which you can put some comment. Save your changes.
+
+## Build the DEB file
+```
+?
+```
