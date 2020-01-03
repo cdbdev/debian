@@ -60,3 +60,5 @@ That last command may take a minute or an hour or three hours. It all depends on
 ```
 dpkg -i <packagename>_<version>_<architecture>.deb
 ```
+
+# The Build Process (upstream source using helper scripts)
