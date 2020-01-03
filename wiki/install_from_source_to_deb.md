@@ -1,7 +1,7 @@
 # Contents
 - [Introduction](#Introduction)
 - [Prerequisites](#Prerequisites)
-- [Build Process - Debianized source](#Build Process - Debianized source) 
+- [Build Process - Debianized source](#BuildProcess-Debianizedsource) 
 - [Build Process - upstream source using helper scripts](#Build Process - upstream source using helper scripts)
 - [Links](#Links)
 
