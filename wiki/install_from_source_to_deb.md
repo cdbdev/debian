@@ -95,6 +95,6 @@ debmake
 ```
 
 This command will generate several important template files:
-- debian/rules file (?)
+- debian/rules file ( contains the package-specific recipes for compiling the source, if required, and constructing one or more binary packages)
 - debian/control (provides the main meta data for the Debian package)
-- debian/copyright (?)
+- debian/copyright (provides the copyright summary data of the Debian package)
