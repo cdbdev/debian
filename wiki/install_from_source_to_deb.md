@@ -100,4 +100,31 @@ This command will generate several important template files:
 - **debian/copyright** (provides the copyright summary data of the Debian package)
 
 ## Modify template files
-In order to install files as a part of the system files, the `$(prefix)` value of `/usr/local` in the Makefile should be overridden to be `/usr`. This can be accommodated by the following the `debian/rules` file with the `override_dh_auto_install` target setting `“prefix=/usr”`.
+In order to install files as a part of the system files, the `$(prefix)` value of `/usr/local` in the Makefile should be overridden to be `/usr`. This can be accommodated by the `debian/rules` file with the `override_dh_auto_install` target setting `“prefix=/usr”`.
+
+An example:
+```bash
+#!/usr/bin/make -f
+export DH_VERBOSE = 1
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
+%:
+        dh $@
+
+override_dh_auto_install:
+        dh_auto_install -- prefix=/usr
+```
+
+## Build the DEB file
+Run the following inside the working directory:
+```bash
+debuild
+```
+
+## Install the DEB file
+That last command may take a minute or an hour or three hours. It all depends on the size of the package and your own hardware. Once the command finishes, a .deb file is created and you can install it (as root) with:
+```bash
+dpkg -i <packagename>_<version>_<architecture>.deb
+```
