@@ -1,1 +1,4 @@
-# Install necessary packages for build
+# Required packages for build
+```
+# apt-get install build-essential fakeroot devscripts
+```
