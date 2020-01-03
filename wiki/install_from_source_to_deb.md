@@ -21,7 +21,7 @@ deb-src http://ftp.us.debian.org/debian/ unstable main
 ```
 Once you've added the line, you'll need to do `apt-get update`.
 
-# The Build Process
+# The Build Process (Debianized source)
 ## Get the dependencies for your package
 ```
 apt-get build-dep <packagename>
