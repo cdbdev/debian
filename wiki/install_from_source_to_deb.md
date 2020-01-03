@@ -124,7 +124,7 @@ debuild
 ```
 
 ## Install the DEB file
-That last command may take a minute or an hour or three hours. It all depends on the size of the package and your own hardware. Once the command finishes, a .deb file is created and you can install it (as root) with:
+Once the previous command finishes, a .deb file is created and you can install it (as root) with:
 ```bash
 dpkg -i <packagename>_<version>_<architecture>.deb
 ```
