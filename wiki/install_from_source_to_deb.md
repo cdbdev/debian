@@ -64,3 +64,33 @@ dpkg -i <packagename>_<version>_<architecture>.deb
 ```
 
 # Build Process (upstream source using helper scripts)
+## Big picture
+The big picture for building a single non-native Debian package from the upstream tarball debhello-0.0.tar.gz can be summarized as:
+```bash
+$ tar -xzmf debhello-0.0.tar.gz
+$ cd debhello-0.0
+$ debmake
+  ... manual customization
+$ debuild
+```
+
+## Get the upstream source
+```bash
+wget http://www.example.org/download/debhello-0.0.tar.gz
+```
+
+## Generate template files with debmake
+The debmake command is the helper script for the Debian packaging.
+- It always sets most of the obvious option states and values to reasonable defaults.
+- It generates the upstream tarball and its required symlink if they are missing.
+- It doesn’t overwrite the existing configuration files in the debian/ directory.
+- It supports the multiarch package.
+- It creates good template files such as the debian/copyright file compliant with DEP-5.
+
+These features make Debian packaging with debmake simple and modern.
+
+```bash
+cd debhello-0.0
+debmake
+```
+
