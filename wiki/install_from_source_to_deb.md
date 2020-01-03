@@ -31,4 +31,5 @@ apt-get build-dep <packagename>
 In order to get the source of your package, go to your working directory and run:
 ```
 apt-get source <packagename>
+cd <packagename>-<version>/
 ```
