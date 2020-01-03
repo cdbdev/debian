@@ -50,6 +50,7 @@ debchange -b -v 0.1.2a-1~bpo10+1
 A text editor opens in which you can put some comment and save your changes.
 
 ## Build the DEB file
+Run the following inside the working directory:
 ```
-?
+# debuild
 ```
