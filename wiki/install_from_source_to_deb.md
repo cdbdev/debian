@@ -98,3 +98,6 @@ This command will generate several important template files:
 - **debian/rules file** ( contains the package-specific recipes for compiling the source, if required, and constructing one or more binary packages)
 - **debian/control** (provides the main meta data for the Debian package)
 - **debian/copyright** (provides the copyright summary data of the Debian package)
+
+## Modify template files
+In order to install files as a part of the system files, the `$(prefix)` value of `/usr/local` in the Makefile should be overridden to be `/usr`. This can be accommodated by the following the `debian/rules` file with the `override_dh_auto_install` target setting `“prefix=/usr”`.
