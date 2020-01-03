@@ -33,3 +33,11 @@ In order to get the source of your package, go to your working directory and run
 apt-get source <packagename>
 cd <packagename>-<version>/
 ```
+
+## Change package version number
+If you're running Debian Stable, you may want to change the package's version number, so that the upgrade path to the next version of Debian Stable is preserved. To do that, you edit the debian/changelog file.
+
+For example, I recently backported version 0.8.3a-1 of wxMaxima to Debian Lenny, so at this point, I ran:
+```
+debchange -b -v 0.8.3a-1~bpo50+1
+```
