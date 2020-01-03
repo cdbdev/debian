@@ -1,9 +1,9 @@
 # Contents
-[Introduction](#Introduction)
-[Prerequisites](#Prerequisites)
-[Build Process - Debianized source](#Build Process - Debianized source)
-[Build Process - upstream source using helper scripts](#Build Process - upstream source using helper scripts)
-[Links](#Links)
+- [Introduction](#Introduction)
+- [Prerequisites](#Prerequisites)
+- [Build Process - Debianized source](#Build Process - Debianized source)
+- [Build Process - upstream source using helper scripts](#Build Process - upstream source using helper scripts)
+- [Links](#Links)
 
 # Introduction
 There are 3 options to build from source:
