@@ -21,7 +21,7 @@ deb-src http://ftp.us.debian.org/debian/ unstable main
 ```
 Once you've added the line, you'll need to do `apt-get update`.
 
-# The Build Process (Debianized source)
+# Build Process (Debianized source)
 ## Get the dependencies for your package
 ```
 apt-get build-dep <packagename>
@@ -61,4 +61,4 @@ That last command may take a minute or an hour or three hours. It all depends on
 dpkg -i <packagename>_<version>_<architecture>.deb
 ```
 
-# The Build Process (upstream source using helper scripts)
+# Build Process (upstream source using helper scripts)
