@@ -87,10 +87,14 @@ The debmake command is the helper script for the Debian packaging.
 - It supports the multiarch package.
 - It creates good template files such as the debian/copyright file compliant with DEP-5.
 
-These features make Debian packaging with debmake simple and modern.
-
+These features make Debian packaging with debmake simple and modern.  
+Let's debianize the upstream source:
 ```bash
 cd debhello-0.0
 debmake
 ```
 
+This command will generate several important template files:
+- debian/rules file (?)
+- debian/control (provides the main meta data for the Debian package)
+- debian/copyright (?)
