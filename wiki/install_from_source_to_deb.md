@@ -128,3 +128,7 @@ Once the previous command finishes, a .deb file is created and you can install i
 ```bash
 dpkg -i <packagename>_<version>_<architecture>.deb
 ```
+
+# Links
+https://www.debian.org/doc/manuals/debmake-doc/ch04.en.html  
+http://forums.debian.net/viewtopic.php?f=16&t=38976  
