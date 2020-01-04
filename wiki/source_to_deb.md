@@ -75,7 +75,7 @@ dpkg -i <packagename>_<version>_<architecture>.deb
 
 ## Remove build dependencies
 ```bash
-apt-get purge <packagename>
+apt-get purge <packagename>-build-deps
 apt-get autoremove
 ```
 
