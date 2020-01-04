@@ -54,10 +54,9 @@ Examples:
 - 1.2.3-4 now becomes 1.2.3-4~bpo9+1 for stretch
 - 1.2.3-4 now becomes 1.2.3-4~bpo10+1 for buster
 
-To do that, you edit the debian/changelog file.  
-Example:
+The following command does this for you:
 ```bash
-$ debchange -b -v 0.1.2a-1~bpo10+1
+$ debchange --bpo
 ```
 A text editor opens in which you can put some comment and save your changes.
 
