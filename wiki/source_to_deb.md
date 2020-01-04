@@ -18,7 +18,7 @@ The first 2 options create so called `backports`, the last one installs the soft
 # Prerequisites
 ## Install required packages for build
 ```bash
-apt-get install build-essential fakeroot devscripts
+# apt-get install build-essential fakeroot devscripts
 ```
 
 ## Configure apt
@@ -34,16 +34,16 @@ Once you've added the line, you'll need to do `apt-get update`.
 # Build Process - Debianized source
 ## Get the dependencies for your package
 ```bash
-mk-build-deps <packagename> --install --root-cmd sudo --remove
+# mk-build-deps <packagename> --install --root-cmd sudo --remove
 ```
 
 > **WARNING:** Do not use `apt-get build-dep <packagename>`, the problem is that there is no easy way to undo or revert the installation of the build dependencies. All the installed packages are marked as manually installed, so later one cannot simply expect to “autoremove” those packages. 
   
 ## Get the source package
-In order to get the source of your package, go to your working directory and run as a regular user:
+In order to get the source of your package, go to your working directory and run:
 ```bash
-apt-get source <packagename>
-cd <packagename>-<version>/
+$ apt-get source <packagename>
+$ cd <packagename>-<version>/
 ```
 
 ## Change package version number
@@ -55,16 +55,16 @@ Examples:
 - 1.2.3-4 now becomes 1.2.3-4~bpo10+1 for buster
 
 To do that, you edit the debian/changelog file.  
-Example (run as regular user):
+Example:
 ```bash
-debchange -b -v 0.1.2a-1~bpo10+1
+$ debchange -b -v 0.1.2a-1~bpo10+1
 ```
 A text editor opens in which you can put some comment and save your changes.
 
 ## Build the DEB file
 Run the following inside the working directory:
 ```bash
-debuild
+$ debuild
 ```
 
 ## Install the DEB file
@@ -75,8 +75,8 @@ dpkg -i <packagename>_<version>_<architecture>.deb
 
 ## Remove build dependencies
 ```bash
-apt-get purge <packagename>-build-deps
-apt-get autoremove
+# apt-get purge <packagename>-build-deps
+# apt-get autoremove
 ```
 
 # Build Process - upstream source using helper scripts
