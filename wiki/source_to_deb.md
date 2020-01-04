@@ -63,7 +63,7 @@ A text editor opens in which you can put some comment and save your changes.
 ## Build the DEB file
 Run the following inside the working directory:
 ```bash
-$ debuild
+$ debuild -us -uc
 ```
 
 ## Install the DEB file
@@ -137,7 +137,7 @@ override_dh_auto_install:
 ## Build the DEB file
 Run the following inside the working directory:
 ```bash
-debuild
+debuild -us -uc
 ```
 
 ## Install the DEB file
