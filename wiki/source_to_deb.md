@@ -74,9 +74,11 @@ dpkg -i <packagename>_<version>_<architecture>.deb
 
 ## Remove build dependencies
 ```bash
-# apt-get purge <packagename>-build-deps
-# apt-get autoremove
+# aptitude purge package_name
 ```
+
+> **Note:** using `apt-get purge <packagename>-build-deps` in combination with
+`apt-get autoremove` instead of `aptitude purge package_name` will not remove all dependency packages.
 
 # Build Process - upstream source using helper scripts
 ## Big picture
