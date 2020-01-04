@@ -65,12 +65,14 @@ Run the following inside the working directory:
 ```bash
 $ debuild -us -uc
 ```
+That last command may take a minute or an hour or three hours. It all depends on the size of the package and your own hardware. Once the command finishes, a .deb file is created and you can install it (as root) with:
 
 ## Install the DEB file
-That last command may take a minute or an hour or three hours. It all depends on the size of the package and your own hardware. Once the command finishes, a .deb file is created and you can install it (as root) with:
+You can install a deb by running the following command:
 ```bash
 dpkg -i <packagename>_<version>_<architecture>.deb
 ```
+This works if the package does not have other dependencies that were created during build. If there are other generated dependencies, the best method to use is `local-apt-repository`.
 
 ## Remove build dependencies
 ```bash
