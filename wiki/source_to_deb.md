@@ -40,7 +40,7 @@ mk-build-deps <packagename> --install --root-cmd sudo --remove
 > **WARNING:** Do not use `apt-get build-dep <packagename>`, the problem is that there is no easy way to undo or revert the installation of the build dependencies. All the installed packages are marked as manually installed, so later one cannot simply expect to “autoremove” those packages. 
   
 ## Get the source package
-In order to get the source of your package, go to your working directory and run:
+In order to get the source of your package, go to your working directory and run as a regular user:
 ```bash
 apt-get source <packagename>
 cd <packagename>-<version>/
@@ -55,7 +55,7 @@ Examples:
 - 1.2.3-4 now becomes 1.2.3-4~bpo10+1 for buster
 
 To do that, you edit the debian/changelog file.  
-Example:
+Example (run as regular user):
 ```bash
 debchange -b -v 0.1.2a-1~bpo10+1
 ```
