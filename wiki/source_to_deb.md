@@ -31,6 +31,12 @@ deb-src http://ftp.debian.org/debian/ experimental main
 ```
 Once you've added the line, you'll need to do `apt-get update`.
 
+## Add a local repository
+```bash
+# apt-get install local-apt-repository
+# mkdir /srv/local-apt-repository
+```
+
 # Build Process - Debianized source
 ## Get the dependencies for your package
 ```bash
@@ -65,14 +71,14 @@ Run the following inside the working directory:
 ```bash
 $ debuild -us -uc
 ```
-That last command may take a minute or an hour or three hours. It all depends on the size of the package and your own hardware. Once the command finishes, a .deb file is created and you can install it (as root) with:
+That last command may take a minute or an hour or three hours. It all depends on the size of the package and your own hardware. Once the command finishes, 1 or more .deb file are created.
 
 ## Install the DEB file
 You can install a deb by running the following command:
 ```bash
 dpkg -i <packagename>_<version>_<architecture>.deb
 ```
-This works if the package does not have other dependencies that were created during build. If there are other generated dependencies, the best method to use is `local-apt-repository`.
+This works if the package does not have other dependencies that were created during build. If there are other generated dependencies, the best method to use is `local-apt-repository`. Just copy all the .deb files tot the necessary location (see prerequisites)..
 
 ## Remove build dependencies
 ```bash
