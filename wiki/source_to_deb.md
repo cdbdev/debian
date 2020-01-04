@@ -73,6 +73,12 @@ That last command may take a minute or an hour or three hours. It all depends on
 dpkg -i <packagename>_<version>_<architecture>.deb
 ```
 
+## Remove build dependencies
+```bash
+apt-get purge <packagename>
+apt-get autoremove
+```
+
 # Build Process - upstream source using helper scripts
 ## Big picture
 The big picture for building a single non-native Debian package from the upstream tarball debhello-0.0.tar.gz can be summarized as:
