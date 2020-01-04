@@ -74,7 +74,7 @@ dpkg -i <packagename>_<version>_<architecture>.deb
 
 ## Remove build dependencies
 ```bash
-# aptitude purge package_name
+# aptitude purge <packagename>-build-deps
 ```
 
 > **Note:** using `apt-get purge <packagename>-build-deps` in combination with
