@@ -49,7 +49,7 @@ The following will install a dependency package named `<packagename>-build-deps`
 ## Get the source package
 In order to get the source of your package, go to your working directory and run:
 ```bash
-$ apt-get source -t <sid|experimental> <packagename>
+$ apt-get source <packagename>
 $ cd <packagename>-<version>/
 ```
 
