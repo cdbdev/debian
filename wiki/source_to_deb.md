@@ -78,7 +78,7 @@ You can install a deb by running the following command:
 ```bash
 dpkg -i <packagename>_<version>_<architecture>.deb
 ```
-This works if the package does not have other dependencies that were created during build. If there are other generated dependencies, the best method to use is `local-apt-repository`. Just copy all the .deb files to **/srv/local-apt-repository** and run `apt install <packagename>`.
+This works if the package does not have other dependencies that were created during build. If there are other generated dependencies, the best method to use is `local-apt-repository`. Just copy all the .deb files to **/srv/local-apt-repository**, run `apt update` and next `apt install <packagename>`.
 
 ## Remove build dependencies
 ```bash
