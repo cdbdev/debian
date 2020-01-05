@@ -39,6 +39,7 @@ Once you've added the line, you'll need to do `apt-get update`.
 
 # Build Process - Debianized source
 ## Get the dependencies for your package
+The following will install a package named <packagename>-build-deps:
 ```bash
 # mk-build-deps <packagename> --install --remove
 ```
@@ -81,6 +82,7 @@ dpkg -i <packagename>_<version>_<architecture>.deb
 This works if the package does not have other dependencies that were created during build. If there are other generated dependencies, the best method to use is `local-apt-repository`. Just copy all the .deb files to **/srv/local-apt-repository**, run `apt update` and next `apt install <packagename>`.
 
 ## Remove build dependencies
+
 ```bash
 # aptitude purge <packagename>-build-deps
 ```
@@ -157,3 +159,4 @@ dpkg -i <packagename>_<version>_<architecture>.deb
 # Links
 https://www.debian.org/doc/manuals/debmake-doc/ch04.en.html  
 http://forums.debian.net/viewtopic.php?f=16&t=38976  
+https://wiki.debian.org/SimpleBackportCreation
