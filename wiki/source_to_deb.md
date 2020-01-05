@@ -39,7 +39,7 @@ Once you've added the line, you'll need to do `apt-get update`.
 
 # Build Process - Debianized source
 ## Get the dependencies for your package
-The following will install a package named <packagename>-build-deps:
+The following will install a package named: <packagename>-build-deps:
 ```bash
 # mk-build-deps <packagename> --install --remove
 ```
