@@ -40,7 +40,7 @@ Once you've added the line, you'll need to do `apt-get update`.
 # Build Process - Debianized source
 ## Get the dependencies for your package
 ```bash
-# mk-build-deps <packagename> --install --root-cmd sudo --remove
+# mk-build-deps <packagename> --install --remove
 ```
 
 > **WARNING:** Do not use `apt-get build-dep <packagename>`, the problem is that there is no easy way to undo or revert the installation of the build dependencies. All the installed packages are marked as manually installed, so later one cannot simply expect to “autoremove” those packages. 
