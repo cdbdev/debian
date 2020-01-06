@@ -1,8 +1,8 @@
 # Contents
-- [1 Introduction](#1-introduction)
-- [2. Prerequisites](#2.-Prerequisites)
-- [3. Build Process - Debianized source](#3.-Build-Process---Debianized-source) 
-- [4. Build Process - upstream source using helper scripts](#4.-Build-Process---upstream-source-using-helper-scripts)
+- [1. Introduction](#1-introduction)
+- [2. Prerequisites](#2-Prerequisites)
+- [3. Build Process - Debianized source](#3-Build-Process---Debianized-source) 
+- [4. Build Process - upstream source using helper scripts](#4-Build-Process---upstream-source-using-helper-scripts)
 - [5. Links](#Links)
 
 # 1. Introduction
