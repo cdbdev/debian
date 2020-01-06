@@ -56,7 +56,7 @@ $ cd <packagename>-<version>/
 ## Change package version number
 If you're running Debian Stable, you may want to change the package's version number to make a proper backport. 
 
-Format of backported package version: append `~bpo${debian_release}+${build_int}`.  
+Format of backported package version: `~bpo${debian_release}+${build_int}`.  
 Examples:
 - 1.2.3-4 now becomes 1.2.3-4~bpo9+1 for stretch
 - 1.2.3-4 now becomes 1.2.3-4~bpo10+1 for buster
