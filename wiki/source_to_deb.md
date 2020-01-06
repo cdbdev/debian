@@ -16,12 +16,12 @@ The first 2 options create so called `backports`, the last one installs the soft
 > **Important:** `make install` should be your absolute last resort. You should **NEVER** use it unless all other options have failed and you should **ONLY** use it IF the package you want to build is of mission critical importance. The `make install` routine is the most primitive method of building a package from source and has absolutely no concept of dependencies or package management. There's a reason why GNU/Linux distributions use package managers like `APT` or `RPM`. And that reason is to get as far away from `make install` as possible. Also if you want to uninstall a package that you installed with the `make install` routine, you better hope that its `make uninstall` routine works just as well as its installation routine or you'll be stuck manually deleting all of the files.
 
 # 2. Prerequisites
-## Install required packages for build
+## 2.1 Install required packages for build
 ```bash
 # apt-get install build-essential fakeroot devscripts
 ```
 
-## Configure apt
+## 2.2 Configure apt
 The next thing that you need to do, is make sure that you have some **source repositories** configured in your computer.  
 Open your `/etc/apt/sources.list` file and check if you have one or more lines that start with `deb-src`:
 
@@ -31,14 +31,14 @@ deb-src http://ftp.debian.org/debian/ experimental main
 ```
 Once you've added the line, you'll need to do `apt-get update`.
 
-## Add a local repository
+## 2.3 Add a local repository
 ```bash
 # apt-get install local-apt-repository
 # mkdir /srv/local-apt-repository
 ```
 
 # 3. Build Process - Debianized source
-## Get the dependencies for your package
+## 3.1 Get the dependencies for your package
 The following will install a dependency package named `<packagename>-build-deps`:
 ```bash
 # mk-build-deps <packagename> --install --remove
@@ -46,14 +46,14 @@ The following will install a dependency package named `<packagename>-build-deps`
 
 > **WARNING:** Do not use `apt-get build-dep <packagename>`, the problem is that there is no easy way to undo or revert the installation of the build dependencies. All the installed packages are marked as manually installed, so later one cannot simply expect to “autoremove” those packages. 
   
-## Get the source package
+## 3.2 Get the source package
 In order to get the source of your package, go to your working directory and run:
 ```bash
 $ apt-get source <packagename>
 $ cd <packagename>-<version>/
 ```
 
-## Change package version number
+## 3.3 Change package version number
 If you're running Debian Stable, you may want to change the package's version number to make a proper backport. 
 
 Format of backported package version: `~bpo${debian_release}+${build_int}`.  
@@ -67,21 +67,21 @@ $ debchange --bpo
 ```
 A text editor opens in which you can put some comment and save your changes.
 
-## Build the DEB file
+## 3.4 Build the DEB file
 Run the following inside the working directory:
 ```bash
 $ debuild -us -uc
 ```
 That last command may take a minute or an hour or three hours. It all depends on the size of the package and your own hardware. Once the command finishes, 1 or more .deb file are created.
 
-## Install the DEB file
+## 3.5 Install the DEB file
 You can install a deb by running the following command:
 ```bash
 dpkg -i <packagename>_<version>_<architecture>.deb
 ```
 This works if the package does not have other dependencies that were created during build. If there are other generated dependencies, the best method to use is `local-apt-repository`. Just copy all the .deb files to **/srv/local-apt-repository**, run `apt update` and next `apt install <packagename>`.
 
-## Remove build dependencies
+## 3.6 Remove build dependencies
 
 ```bash
 # aptitude purge <packagename>-build-deps
@@ -91,7 +91,7 @@ This works if the package does not have other dependencies that were created dur
 `apt-get autoremove` instead of `aptitude purge package_name` will not remove all dependency packages.
 
 # 4. Build Process - upstream source using helper scripts
-## Big picture
+## 4.1 Big picture
 The big picture for building a single non-native Debian package from the upstream tarball debhello-0.0.tar.gz can be summarized as:
 ```bash
 $ tar -xzmf debhello-0.0.tar.gz
@@ -101,12 +101,12 @@ $ debmake
 $ debuild
 ```
 
-## Get the upstream source
+## 4.2 Get the upstream source
 ```bash
 wget http://www.example.org/download/debhello-0.0.tar.gz
 ```
 
-## Generate template files with debmake
+## 4.3 Generate template files with debmake
 The debmake command is the helper script for the Debian packaging.
 - It always sets most of the obvious option states and values to reasonable defaults.
 - It generates the upstream tarball and its required symlink if they are missing.
@@ -126,7 +126,7 @@ This command will generate several important template files:
 - **debian/control** (provides the main meta data for the Debian package)
 - **debian/copyright** (provides the copyright summary data of the Debian package)
 
-## Modify template files
+## 4.4 Modify template files
 In order to install files as a part of the system files, the `$(prefix)` value of `/usr/local` in the Makefile should be overridden to be `/usr`. This can be accommodated by the `debian/rules` file with the `override_dh_auto_install` target setting `“prefix=/usr”`.
 
 An example:
@@ -144,13 +144,13 @@ override_dh_auto_install:
         dh_auto_install -- prefix=/usr
 ```
 
-## Build the DEB file
+## 4.5 Build the DEB file
 Run the following inside the working directory:
 ```bash
 debuild -us -uc
 ```
 
-## Install the DEB file
+## 4.6 Install the DEB file
 Once the previous command finishes, a .deb file is created and you can install it (as root) with:
 ```bash
 dpkg -i <packagename>_<version>_<architecture>.deb
