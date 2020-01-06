@@ -1,11 +1,11 @@
 # Contents
-- [Introduction](#Introduction)
-- [Prerequisites](#Prerequisites)
-- [Build Process - Debianized source](#Build-Process---Debianized-source) 
-- [Build Process - upstream source using helper scripts](#Build-Process---upstream-source-using-helper-scripts)
-- [Links](#Links)
+- [1 Introduction](#1.-Introduction)
+- [2. Prerequisites](#2.-Prerequisites)
+- [3. Build Process - Debianized source](#3.-Build-Process---Debianized-source) 
+- [4. Build Process - upstream source using helper scripts](#4.-Build-Process---upstream-source-using-helper-scripts)
+- [5. Links](#Links)
 
-# Introduction
+# 1. Introduction
 There are 3 options to build from source:
 - create DEB from Debianized source
 - create DEB from upstream source using helper scripts
@@ -15,7 +15,7 @@ The first 2 options create so called `backports`, the last one installs the soft
 
 > **Important:** `make install` should be your absolute last resort. You should **NEVER** use it unless all other options have failed and you should **ONLY** use it IF the package you want to build is of mission critical importance. The `make install` routine is the most primitive method of building a package from source and has absolutely no concept of dependencies or package management. There's a reason why GNU/Linux distributions use package managers like `APT` or `RPM`. And that reason is to get as far away from `make install` as possible. Also if you want to uninstall a package that you installed with the `make install` routine, you better hope that its `make uninstall` routine works just as well as its installation routine or you'll be stuck manually deleting all of the files.
 
-# Prerequisites
+# 2. Prerequisites
 ## Install required packages for build
 ```bash
 # apt-get install build-essential fakeroot devscripts
@@ -37,7 +37,7 @@ Once you've added the line, you'll need to do `apt-get update`.
 # mkdir /srv/local-apt-repository
 ```
 
-# Build Process - Debianized source
+# 3. Build Process - Debianized source
 ## Get the dependencies for your package
 The following will install a dependency package named `<packagename>-build-deps`:
 ```bash
@@ -90,7 +90,7 @@ This works if the package does not have other dependencies that were created dur
 > **Note:** using `apt-get purge <packagename>-build-deps` in combination with
 `apt-get autoremove` instead of `aptitude purge package_name` will not remove all dependency packages.
 
-# Build Process - upstream source using helper scripts
+# 4. Build Process - upstream source using helper scripts
 ## Big picture
 The big picture for building a single non-native Debian package from the upstream tarball debhello-0.0.tar.gz can be summarized as:
 ```bash
