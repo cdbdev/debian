@@ -3,7 +3,7 @@
 - [2. Prerequisites](#2-Prerequisites)
 - [3. Build Process - Debianized source](#3-Build-Process---Debianized-source) 
 - [4. Build Process - upstream source using helper scripts](#4-Build-Process---upstream-source-using-helper-scripts)
-- [5. Links](#Links)
+- [5. Links](#5-Links)
 
 # 1. Introduction
 There are 3 options to build from source:
@@ -156,7 +156,7 @@ Once the previous command finishes, a .deb file is created and you can install i
 dpkg -i <packagename>_<version>_<architecture>.deb
 ```
 
-# Links
+# 5. Links
 https://www.debian.org/doc/manuals/debmake-doc/ch04.en.html  
 http://forums.debian.net/viewtopic.php?f=16&t=38976  
 https://wiki.debian.org/SimpleBackportCreation
