@@ -113,7 +113,6 @@ In this case, just copy all the .deb files to **/srv/local-apt-repository**, run
 ## 3.6 Remove build dependencies
 
 ```bash
-CODE: SELECT ALL
 # apt-get purge <packagename>-build-deps
 # apt-get autoremove
 ```
