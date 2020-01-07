@@ -79,15 +79,32 @@ $ debuild -us -uc
 That last command may take a minute or an hour or three hours. It all depends on the size of the package and your own hardware. Once the command finishes, 1 or more .deb file are created.
 
 ## 3.5 Install the DEB file
-To find out the name of your generated .deb file, look at a file with extension **.build**. This will leave you with an indication of the filename.  
+To find out the name of your generated .deb file, search for a file with extension **.build**. This will leave you with an indication of the filename.  
+
 You can install a deb by running the following command:
 ```bash
-dpkg -i <packagename>_<version>_<architecture>.deb
+# dpkg -i <packagename>_<version>_<architecture>.deb
 ```
 This works if the package does not have other dependencies that were created during build. If there are other generated dependencies, the best method to use is `local-apt-repository`. 
 
 Example when extra dependencies are required (e.g. php package):
 ```bash
+Selecting previously unselected package php7.4.
+(Reading database ... 207306 files and directories currently installed.)
+Preparing to unpack php7.4_7.4.0~rc6-1~bpo10+1_all.deb ...
+Unpacking php7.4 (7.4.0~rc6-1~bpo10+1) ...
+dpkg: dependency problems prevent configuration of php7.4:
+ php7.4 depends on libapache2-mod-php7.4 | php7.4-fpm | php7.4-cgi; however:
+  Package libapache2-mod-php7.4 is not installed.
+  Package php7.4-fpm is not installed.
+  Package php7.4-cgi is not installed.
+ php7.4 depends on php7.4-common; however:
+  Package php7.4-common is not installed.
+
+dpkg: error processing package php7.4 (--install):
+ dependency problems - leaving unconfigured
+Errors were encountered while processing:
+ php7.4
 
 ```
 
