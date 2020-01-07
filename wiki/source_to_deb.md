@@ -113,11 +113,10 @@ In this case, just copy all the .deb files to **/srv/local-apt-repository**, run
 ## 3.6 Remove build dependencies
 
 ```bash
-# aptitude purge <packagename>-build-deps
+CODE: SELECT ALL
+# apt-get purge <packagename>-build-deps
+# apt-get autoremove
 ```
-
-> **Note:** using `apt-get purge <packagename>-build-deps` in combination with
-`apt-get autoremove` instead of `aptitude purge package_name` will not remove all dependency packages.
 
 # 4. Build Process - upstream source using helper scripts
 ## 4.1 Big picture
