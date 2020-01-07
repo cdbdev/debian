@@ -32,12 +32,10 @@ deb-src http://ftp.debian.org/debian/ experimental main
 Once you've added the line, you'll need to do `apt-get update`.
 
 ## 2.3 Add a local repository
-Goal: Create local repository from packages dropped into a certain directory  
-Pros:
-- Simple to use 
+In case you need to install a package with a lot of dependencies, which need to be installed separately, you can add a local repository. This option allows the `apt` command to also look for the dependencies in a specific directory on the local host.  
 
-Cons:
-- Repository available only to the local host, not to other machines 
+An easy tool to use is: `local-apt-repository`.
+> **NOTE:** This option is only available tot the local host, not to other machines.
 ```bash
 # apt-get install local-apt-repository
 # mkdir /srv/local-apt-repository
