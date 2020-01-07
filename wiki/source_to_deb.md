@@ -79,11 +79,19 @@ $ debuild -us -uc
 That last command may take a minute or an hour or three hours. It all depends on the size of the package and your own hardware. Once the command finishes, 1 or more .deb file are created.
 
 ## 3.5 Install the DEB file
+To find out the name of your generated .deb file, look at a file with extension **.build**. This will leave you with an indication of the filename.  
 You can install a deb by running the following command:
 ```bash
 dpkg -i <packagename>_<version>_<architecture>.deb
 ```
-This works if the package does not have other dependencies that were created during build. If there are other generated dependencies, the best method to use is `local-apt-repository`. Just copy all the .deb files to **/srv/local-apt-repository**, run `apt update` and next `apt install <packagename>`. For more info see: [Prerequisite -> Local Repository](#23-Add-a-local-repository).
+This works if the package does not have other dependencies that were created during build. If there are other generated dependencies, the best method to use is `local-apt-repository`. 
+
+Example when extra dependencies are required (e.g. php package):
+```bash
+
+```
+
+In this case, just copy all the .deb files to **/srv/local-apt-repository**, run `apt update` and next `apt install <packagename>`. For more info see: [Prerequisite -> Local Repository](#23-Add-a-local-repository).
 
 ## 3.6 Remove build dependencies
 
