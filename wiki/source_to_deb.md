@@ -74,7 +74,7 @@ A text editor opens in which you can put some comment and save your changes.
 ## 3.4 Build the DEB file
 Run the following inside the working directory:
 ```bash
-$ debuild -us -uc
+$ debuild -us -uc -jauto
 ```
 That last command may take a minute or an hour or three hours. It all depends on the size of the package and your own hardware. Once the command finishes, 1 or more .deb file are created.
 
@@ -113,9 +113,9 @@ In this case, just copy all the .deb files to **/srv/local-apt-repository**, run
 ## 3.6 Remove build dependencies
 
 ```bash
-# apt-get purge <packagename>-build-deps
-# apt-get autoremove
+# aptitude purge <package name>-build-deps
 ```
+> **Note:** using `apt-get purge <packagename>-build-deps` in combination with`apt-get autoremove` instead of `aptitude purge package_name` will not remove all dependency packages.
 
 # 4. Build Process - upstream source using helper scripts
 ## 4.1 Big picture
