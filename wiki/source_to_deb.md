@@ -18,7 +18,7 @@ The first 2 options create so called `backports`, the last one installs the soft
 # 2. Prerequisites
 ## 2.1 Install required packages for build
 ```bash
-# apt-get install build-essential fakeroot devscripts
+# apt-get install build-essential fakeroot devscripts debmake
 ```
 
 ## 2.2 Configure apt
