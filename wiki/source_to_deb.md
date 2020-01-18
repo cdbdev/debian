@@ -156,7 +156,7 @@ This command will generate several important template files:
 ## 4.4 Modify template files
 In order to install files as a part of the system files, the `$(prefix)` value of `/usr/local` in the Makefile should be overridden to be `/usr`. This can be accommodated by the `debian/rules` file with the `override_dh_auto_install` target setting `“prefix=/usr”`.
 
-An example:
+Example (install to /usr):
 ```bash
 #!/usr/bin/make -f
 export DH_VERBOSE = 1
@@ -166,9 +166,35 @@ export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
 %:
         dh $@
+        
+override_dh_auto_install:
+	dh_auto_install -- prefix=/usr
+```
+
+Example (several overrides):
+```bash
+#!/usr/bin/make -f
+# You must remove unused comment lines for the released package.
+#export DH_VERBOSE = 1
+#export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+#export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
+#export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	./configure
+
+override_dh_auto_build:
+	make -j4
+	make doc
+
+override_dh_auto_test:
+	make test-only
 
 override_dh_auto_install:
-        dh_auto_install -- prefix=/usr
+	dh_auto_install -- prefix=/usr
 ```
 
 ## 4.5 Build the DEB file
