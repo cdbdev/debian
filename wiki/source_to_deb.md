@@ -182,19 +182,18 @@ Example (several overrides):
 
 %:
 	dh $@
-
 override_dh_auto_configure:
-	./configure
+	./configure --prefix=/usr 
 
 override_dh_auto_build:
 	make -j4
 	make doc
 
 override_dh_auto_test:
-	make test-only
+	make test-only || echo "warning: tests failed" > tests.log
 
-override_dh_auto_install:
-	dh_auto_install -- prefix=/usr
+override_dh_usrlocal:
+	
 ```
 
 ## 4.5 Build the DEB file
