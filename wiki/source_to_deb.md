@@ -78,7 +78,7 @@ $ debuild -us -uc -jauto
 ```
 That last command may take a minute or an hour or three hours. It all depends on the size of the package and your own hardware. Once the command finishes, 1 or more .deb file are created.
 
-> Warning: It could be that several tests fail during build. Most of the time this is not a problem. Debian packagers have to disable some or all of them for certain packages, since they fail in the standard chroot or schroot build environments that they use. If you really want to be sure, you can check if these errors occurred during the official builds: https://buildd.debian.org/. If you see the errors for the respective build there, then it must be okay because the Debian developers saw fit to release it in that state.
+> **INFO**: It could be that several tests fail during build. Most of the time this is not a problem. Debian packagers have to disable some or all of them for certain packages, since they fail in the standard chroot or schroot build environments that they use. If you really want to be sure, you can check if these errors occurred during the official builds: https://buildd.debian.org/. If you see the errors for the respective build there, then it must be okay because the Debian developers saw fit to release it in that state.
 
 ## 3.5 Install the DEB file
 To find out the name of your generated .deb file, search for a file with extension **.build**. This will leave you with an indication of the filename.  
