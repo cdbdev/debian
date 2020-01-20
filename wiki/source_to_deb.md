@@ -204,6 +204,8 @@ Run the following inside the working directory:
 debuild -us -uc
 ```
 
+> **INFO**: It could be that several lintian errors occur during build. This is normal behaviour, lots of official Debian packages have a long list of overrides, or even extant Lintian issues: https://lintian.debian.org/tags.html. You can use a Lintian override to get rid of them if desired: https://lintian.debian.org/manual/section-2.4.html.
+
 ## 4.6 Install the DEB file
 Once the previous command finishes, a .deb file is created and you can install it (as root) with:
 ```bash
