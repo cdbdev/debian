@@ -109,7 +109,7 @@ echo ":: Configuring unbound..."
 apt-get -y install openresolv unbound
 sudo unbound-anchor -4
 rm /etc/unbound/unbound.conf.d/*
-cp conf/unbound.conf /etc/unbound/unbound.conf
+cp conf/unbound.conf /etc/unbound/
 cp conf/resolvconf.conf /etc/
 resolvconf -u
 systemctl enable unbound.service
