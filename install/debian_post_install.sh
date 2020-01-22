@@ -108,8 +108,8 @@ apt-get -y install papirus-icon-theme
 echo ":: Configuring unbound..."
 apt-get -y install openresolv unbound
 sudo unbound-anchor -4
-cp conf/unbound.conf /etc/unbound/unbound.conf
 rm /etc/unbound/unbound.conf.d/*
+cp conf/unbound.conf /etc/unbound/unbound.conf
 cp conf/resolvconf.conf /etc/
 resolvconf -u
 systemctl enable unbound.service
