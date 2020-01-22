@@ -102,8 +102,6 @@ echo ":: Installing extras"
 apt-get -y install arc-theme
 apt-get -y install papirus-icon-theme
 
-echo ":: Installation finished"
-
 # ----------------------------------------------- 
 # Configure dnsmasq
 # ----------------------------------------------- 
@@ -115,3 +113,5 @@ cp conf/dnsmasq.conf /etc/
 cp conf/resolvconf.conf /etc/
 cp conf/trust-anchors.conf /usr/share/dnsmasq/
 resolvconf -u
+
+echo ":: Process complete"
