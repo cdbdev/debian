@@ -105,7 +105,6 @@ apt-get -y install papirus-icon-theme
 # -----------------------------------------------------------------------
 # Configure dnsmasq
 # -----------------------------------------------------------------------
-echo ":: Configuring dnsmasq"
 echo ":: Configuring dnsmasq..."
 apt-get -y install openresolv dnsmasq
 systemctl enable dnsmasq.service
