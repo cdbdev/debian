@@ -35,6 +35,7 @@ cat /etc/os-release
 echo -n ">> Please enter debian version [buster,...]: "
 read debian_version
 
+echo ":: Updating system..."
 echo "deb http://deb.debian.org/debian $debian_version main contrib non-free" > /etc/apt/sources.list
 echo -e "deb-src http://deb.debian.org/debian $debian_version main contrib non-free\n\n" >> /etc/apt/sources.list
 echo "deb http://deb.debian.org/debian-security/ $debian_version/updates main contrib non-free" >> /etc/apt/sources.list
@@ -47,6 +48,7 @@ apt-get update && apt-get -y upgrade
 # ----------------------------------------------- 
 # Install extra software
 # ----------------------------------------------- 
+echo ":: Installing extra software..."
 apt-get -y install aptitude catfish gedit lightdm-gtk-greeter-settings
 
 # ----------------------------------------------- 
@@ -74,6 +76,7 @@ systemctl enable nftables.service
 # ----------------------------------------------- 
 # Clear error on systemd network initialization
 # ----------------------------------------------- 
+echo ":: Clearing old network settings"
 if [ ! "$(ls -A /etc/network/interfaces.d)" ]
 then
     echo ":: Clearing setup network configuration..."
@@ -89,11 +92,13 @@ dpkg -i conf/firmware-atheros_20190717-1_all.deb
 # ----------------------------------------------- 
 # Install AMD firmware
 # ----------------------------------------------- 
+echo ":: Installing AMD firmware"
 apt-get -y install firmware-linux
 
 # ----------------------------------------------- 
 # Installation extras
 # ----------------------------------------------- 
+echo ":: Installing extras"
 apt-get -y install arc-theme
 apt-get -y install papirus-icon-theme
 
@@ -102,6 +107,7 @@ echo ":: Installation finished"
 # ----------------------------------------------- 
 # Configure dnsmasq
 # ----------------------------------------------- 
+echo ":: Configuring dnsmasq"
 echo ":: Configuring dnsmasq..."
 apt-get -y install openresolv dnsmasq
 systemctl enable dnsmasq.service
