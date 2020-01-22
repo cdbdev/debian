@@ -59,6 +59,12 @@ apt-get -y install screenfetch
 echo screenfetch >> .bashrc
 
 # -----------------------------------------------------------------------
+# Enable bluetooth
+# -----------------------------------------------------------------------
+systemctl enable bluetooth
+systemctl start bluetooth
+
+# -----------------------------------------------------------------------
 # Fix dark screen & hibernate
 # -----------------------------------------------------------------------
 echo ":: Adjusting GRUB for optimal display..."
