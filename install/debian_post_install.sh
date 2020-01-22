@@ -105,12 +105,14 @@ apt-get -y install papirus-icon-theme
 # -----------------------------------------------------------------------
 # Configure dnsmasq
 # -----------------------------------------------------------------------
-echo ":: Configuring dnsmasq..."
-apt-get -y install openresolv dnsmasq
-systemctl enable dnsmasq.service
-cp conf/dnsmasq.conf /etc/
+echo ":: Configuring unbound..."
+apt-get -y install openresolv unbound
+sudo unbound-anchor -4
+cp conf/unbound.conf /etc/unbound/unbound.conf
+rm /etc/unbound/unbound.conf.d/*
 cp conf/resolvconf.conf /etc/
-cp conf/trust-anchors.conf /usr/share/dnsmasq/
 resolvconf -u
+systemctl enable unbound.service
+systemctl start unbound.service
 
 echo ":: Process complete"
