@@ -77,7 +77,7 @@ systemctl enable nftables.service
 # Clear error on systemd network initialization
 # -----------------------------------------------------------------------
 echo ":: Clearing old network settings"
-if [ ! "$(ls -A /etc/network/interfaces.d)" ]
+if [  -n "$(ls -A /etc/network/interfaces.d/ 2>/dev/null)" ]
 then
     echo ":: Clearing setup network configuration..."
     rm /etc/network/interfaces.d/*
