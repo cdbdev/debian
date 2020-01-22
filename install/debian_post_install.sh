@@ -62,7 +62,6 @@ echo screenfetch >> .bashrc
 # Enable bluetooth
 # -----------------------------------------------------------------------
 systemctl enable bluetooth
-systemctl start bluetooth
 
 # -----------------------------------------------------------------------
 # Fix dark screen & hibernate
@@ -119,6 +118,5 @@ cp conf/unbound.conf /etc/unbound/
 cp conf/resolvconf.conf /etc/
 resolvconf -u
 systemctl enable unbound.service
-systemctl start unbound.service
 
-echo ":: Process complete"
+echo ":: Process complete. Please reboot now."
