@@ -103,7 +103,7 @@ apt-get -y install arc-theme
 apt-get -y install papirus-icon-theme
 
 # -----------------------------------------------------------------------
-# Configure dnsmasq
+# Configure unbound
 # -----------------------------------------------------------------------
 echo ":: Configuring unbound..."
 apt-get -y install openresolv unbound
