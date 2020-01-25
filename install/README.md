@@ -100,3 +100,9 @@ The non-live installer does not automatically install the necessary firmware for
 ```
 apt install firmware-linux
 ```
+
+## Customizing xfce panel clock
+Right-click on the clock item and choose `Properties`. In **Clock Options**, choose for `Custom Format` and enter the following in the inputfield:
+```bash
+<span size="x-small">%H:%M%n%d.%m</span>
+```
