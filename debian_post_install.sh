@@ -93,7 +93,7 @@ fi
 # Install necessary firmware files for atheros card
 # -----------------------------------------------------------------------
 echo ":: Installing atheros firmware..."
-apt-get -y -t buster-backports install firmware-atheros
+apt-get -y -t $debian_version-backports install firmware-atheros
 
 # -----------------------------------------------------------------------
 # Install AMD firmware
