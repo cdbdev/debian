@@ -42,6 +42,7 @@ echo "deb http://deb.debian.org/debian-security/ $debian_version/updates main co
 echo -e "deb-src http://deb.debian.org/debian-security/ $debian_version/updates main contrib non-free\n\n" >> /etc/apt/sources.list
 echo "deb http://deb.debian.org/debian $debian_version-updates main contrib non-free" >> /etc/apt/sources.list
 echo "deb-src http://deb.debian.org/debian $debian_version-updates main contrib non-free" >> /etc/apt/sources.list
+echo "deb http://deb.debian.org/debian $debian_version-backports main contrib non-free" >> /etc/apt/sources.list
 
 apt-get update && apt-get -y upgrade
 
@@ -92,7 +93,7 @@ fi
 # Install necessary firmware files for atheros card
 # -----------------------------------------------------------------------
 echo ":: Installing atheros firmware..."
-dpkg -i conf/firmware-atheros_20190717-1_all.deb
+apt-get -y -t buster-backports install firmware-atheros
 
 # -----------------------------------------------------------------------
 # Install AMD firmware
