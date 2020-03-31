@@ -50,7 +50,7 @@ apt-get update && apt-get -y upgrade
 # Install extra software
 # -----------------------------------------------------------------------
 echo ":: Installing extra software..."
-apt-get -y install aptitude blueman gedit catfish lightdm-gtk-greeter-settings
+apt-get -y install aptitude blueman gedit catfish lightdm-gtk-greeter-settings unzip
 
 # -----------------------------------------------------------------------
 # Add screenfetch
