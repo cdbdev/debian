@@ -49,7 +49,7 @@ The "hold" package state for apt can be changed using:
 ## Start from "pure" Debian (deb822-style)
 Rename "/etc/apt/sources.list" to "/etc/apt/debian.sources"
 
-Change APT-sources to new Debian version
+## Change APT-sources to new Debian version
 Check that the APT sources entries (in files under /etc/apt/sources.list.d/) refer either to "trixie" or to "stable". 
 
 ## Updating the package list
