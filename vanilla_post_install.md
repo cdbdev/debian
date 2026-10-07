@@ -1,5 +1,5 @@
 ## Setup firewall
-Download nftables.conf from: https://raw.githubusercontent.com/cdbdev/debian/refs/heads/master/conf/nftables.conf 
+Download nftables.conf from: https://raw.githubusercontent.com/cdbdev/debian/refs/heads/master/conf/nftables.conf  
 Then run the following:
 ```
 # mv conf/nftables.conf /etc/
@@ -26,6 +26,7 @@ Save the file and execute:
 - firmware-linux
 - (only for old iMac) firmware-b43-installer
 - network-manager
+  
 Reboot system
 
 ## Connect with wifi (after installation of network-manager)
