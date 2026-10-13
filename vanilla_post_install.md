@@ -69,3 +69,37 @@ check result with:
 ```
 # apt install xorg i3-wm lightdm rofi i3lock xss-lock i3status kitty ranger thunar feh
 ```
+
+## i3 config
+Update existing config.
+
+Replace the launcher for 'dmenu' with 'rofi' (search for $mod+d):
+```
+bindsym $mod+d exec --no-startup-id rofi -show drun
+```
+
+Replace the way how you exit i3:
+```
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exit
+```
+
+Add the following to the end:
+```
+# Background
+exec --no-startup-id feh --bg-scale /home/chris/Downloads/debian_i3.png
+```
+
+## Rofi config
+Generate initial config:
+```
+# mkdir .config/rofi
+# rofi -dump-config > .config/rofi/config.rasi
+```
+
+Uncomment the following:
+```
+matching: "normal";
+tokenize: true;
+steal-focus:true;
+```
