@@ -65,3 +65,7 @@ check result with:
 # apt autoremove --purge
 ```
 
+## Window Manager i3 with tools
+```
+# apt install xorg i3-wm lightdm rofi i3lock xss-lock i3status kitty ranger thunar
+```
