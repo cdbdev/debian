@@ -70,6 +70,11 @@ check result with:
 # apt install xorg i3-wm lightdm rofi i3lock xss-lock i3status kitty ranger thunar feh
 ```
 
+## Install c compiler and tools
+```
+# apt install build-essential gdb
+```
+
 ## i3 config
 Update existing config.
 
