@@ -67,7 +67,7 @@ check result with:
 
 ## Window Manager i3 with tools
 ```
-# apt install xorg i3-wm lightdm rofi i3lock xss-lock i3status kitty ranger thunar feh
+# apt install xorg i3-wm lightdm rofi i3lock xss-lock i3status kitty ranger thunar feh zram-tools
 ```
 
 ## Install c compiler and tools
